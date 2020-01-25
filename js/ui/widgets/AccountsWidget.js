@@ -80,7 +80,6 @@ class AccountsWidget {
   clear() {
     const accounts = this.element.getElementsByClassName('account');
 
-    
     [...accounts].forEach(account => account.remove());
   }
 
@@ -110,7 +109,7 @@ class AccountsWidget {
    * item - объект с данными о счёте
    * */
   getAccountHTML(item) {
-    let accountTemplate;
+    let accountTemplate = '';
     item.forEach(el => {
       accountTemplate += `<li class="active account" data-id=${el.id}>
         <a href="#">

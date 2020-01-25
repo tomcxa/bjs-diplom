@@ -99,7 +99,7 @@ class TransactionsPage {
   render(options) {
     if (options) {
       this.lastOptions = options;
-      const xhr = Account.get(options.account_id, {}, (err, response) => {
+      Account.get(options.account_id, {}, (err, response) => {
         try {
           const data = response.data;
           this.renderTitle(data.name);
@@ -119,7 +119,6 @@ class TransactionsPage {
           console.error(error);
         }
       });
-      console.log(xhr)
     }
   }
 
